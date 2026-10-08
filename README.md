@@ -24,6 +24,16 @@ Open `index.html` in a browser or publish the folder through GitHub Pages. Until
 
 Do not commit private credentials. The Supabase anon/public key is visible to visitors by design; access protection comes from the database's RLS policies. Keep RLS enabled and never put a service-role key in browser code.
 
+## If the confirmation link shows a 404
+
+For a GitHub Pages project site, the URL normally includes the repository path, for example `https://USERNAME.github.io/REPOSITORY/`. In Supabase **Authentication → URL Configuration**:
+
+- Set **Site URL** to that complete URL, including the repository path and trailing slash.
+- Add the same complete URL under **Redirect URLs**.
+- Do not use only `https://USERNAME.github.io` unless the repository is the account's special `USERNAME.github.io` user-site repository.
+
+The app now sends the current GitHub Pages folder as `emailRedirectTo` for new sign-ups. After changing the Supabase settings, create a fresh test account or request a new confirmation email. An older link may still contain the old, incorrect redirect. If the old link displayed a 404 but the account was confirmed, return to the app and try signing in.
+
 ## Privacy, durability, and maintenance
 
 - This is intended as a public signup site with private per-user book records. Users choose their own email/password; enable email confirmation and configure password/security options in Supabase.
