@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#f7f5ef"><title>Robyn's Reading Room — your reading life</title>
-<link rel="stylesheet" href="styles.css?v=1.0.1">
+<link rel="stylesheet" href="styles.css?v=1.0.2">
 </head>
 <body>
 <div class="shell">
@@ -24,11 +24,11 @@
     <div class="search-row"><label class="searchbox"><span>⌕</span><input id="library-search" placeholder="Search your library…" autocomplete="off"><kbd>⌘ K</kbd></label><button class="outline" id="discover-btn">⌕ <span>Find a book</span></button><button class="sort-button" id="sort-btn">Recently added⌄</button></div></section>
     <section id="book-grid" class="book-grid" aria-live="polite"></section>
     <section id="empty-state" class="empty-state"><div class="empty-icon">✳</div><h3>Your next favourite might be here.</h3><p>Add a book you’ve read, are reading, or can’t wait to start.</p><button class="primary" id="empty-add">＋ Find your first book</button></section>
-    <footer><span>Made for the love of a good story.</span><div class="footer-actions"><button id="privacy-btn">Privacy &amp; support</button><button id="deletion-btn">Account deletion</button><button id="export-btn">Export my library ↓</button></div></footer>
+    <footer><span>Made for the love of a good story.</span><div class="footer-actions"><button id="privacy-btn">Privacy &amp; support</button><button id="deletion-btn">Account deletion</button><button id="export-btn">Export my library ↓</button><small class="app-version">v1.0.2</small></div></footer>
   </main>
 </div>
 <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-backdrop"></div><div class="modal-card"><button class="close" id="close-modal" aria-label="Close">×</button><div id="modal-content"></div></div></div>
 <div id="toast" class="toast" role="status"></div>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="app.js?v=1.0.1"></script>
+<script src="app.js?v=1.0.2"></script>
 </body></html>

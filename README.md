@@ -1,8 +1,8 @@
 # Robyn's Reading Room — book library app
 
-**Testing build: v1.0.1**
+**Testing build: v1.0.2**
 
-A responsive static web app for tracking books, reading status, five-star ratings, personal notes and synopses. Title/author search uses Open Library. Remembered plot/character searches also query Google Books and combine catalogue matches; availability and ranking depend on the catalogues, so this is keyword-based discovery rather than guaranteed semantic search. When available, the Google Books description is saved as the book synopsis. Export your collection as JSON.
+A responsive static web app for tracking books, reading status, five-star ratings, personal notes and synopses. Search results already present in the current library are hidden, and duplicate title/author or catalogue-key saves are blocked. Title/author search uses Open Library. Remembered plot/character searches also query Google Books and combine catalogue matches; availability and ranking depend on the catalogues, so this is keyword-based discovery rather than guaranteed semantic search. When available, the Google Books description is saved as the book synopsis. Export your collection as JSON.
 
 ## Try it
 
