@@ -8,12 +8,15 @@ create table if not exists public.books (
   rating smallint not null default 0 check (rating between 0 and 5),
   notes text not null default '',
   synopsis text not null default '',
+  characters text[] not null default '{}'::text[],
   cover_id bigint,
   cover_url text,
   openlibrary_key text,
   published_year integer,
   created_at timestamptz not null default now()
 );
+-- Adds the character list to projects created with an earlier version.
+alter table public.books add column if not exists characters text[] not null default '{}'::text[];
 create index if not exists books_user_created_idx on public.books(user_id, created_at desc);
 alter table public.books enable row level security;
 -- Each signed-in user can access only their own records.

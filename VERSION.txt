@@ -1,9 +1,11 @@
 Robyn's Reading Room
-Version: 1.0.2
+Version: 1.0.3
 Release type: Testing build
 
 This build includes:
 - Version display in the main screen footer.
 - Robust real-time library count refresh.
 - Sign-in modal dismissal after successful login.
+- Open Library and Google Books queried for every search.
+- Longer synopsis selection and catalogue-supplied character lists.
 - Duplicate-book prevention in search and save flows.

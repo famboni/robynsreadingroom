@@ -1,8 +1,8 @@
 # Robyn's Reading Room — book library app
 
-**Testing build: v1.0.2**
+**Testing build: v1.0.3**
 
-A responsive static web app for tracking books, reading status, five-star ratings, personal notes and synopses. Search results already present in the current library are hidden, and duplicate title/author or catalogue-key saves are blocked. Title/author search uses Open Library. Remembered plot/character searches also query Google Books and combine catalogue matches; availability and ranking depend on the catalogues, so this is keyword-based discovery rather than guaranteed semantic search. When available, the Google Books description is saved as the book synopsis. Export your collection as JSON.
+A responsive static web app for tracking books, reading status, five-star ratings, personal notes, synopses, and catalogue-supplied character lists. Every search queries both Open Library and Google Books; the longer available description is used, and matching character subjects are included when the catalogue supplies them. Search results already present in the current library are hidden, and duplicate title/author or catalogue-key saves are blocked. Export your collection as JSON.
 
 ## Try it
 
@@ -11,7 +11,7 @@ Open `index.html` in a browser or publish the folder through GitHub Pages. Until
 ## Enable accounts and cloud storage (Supabase)
 
 1. Create a Supabase project at [supabase.com](https://supabase.com/).
-2. In **SQL Editor**, run all of `supabase-setup.sql`. This creates the books table and row-level security policies so users can access only rows whose `user_id` matches their account.
+2. In **SQL Editor**, run all of `supabase-setup.sql`. This creates the books table and row-level security policies so users can access only rows whose `user_id` matches their account. The script also adds the `characters` column for catalogue-supplied main-character lists. If the table already exists, run the updated script again so the `alter table ... add column if not exists` migration is applied.
 3. In Supabase **Authentication → URL Configuration**, set your Site URL to the deployed GitHub Pages address (for example `https://YOURNAME.github.io/robyns-reading-room/`) and add that URL under Redirect URLs. In **Authentication → Providers → Email**, enable the setting that requires email confirmation. Email confirmation is required by this app; users must confirm before they can sign in.
 4. In **Project Settings → API**, copy the Project URL and the **anon/public** key. These are intended for browser use when row-level security is enabled. Never use the `service_role` key in this site.
 5. Edit the `CONFIG` values near the start of `app.js`:
